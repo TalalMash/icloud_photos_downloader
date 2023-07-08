@@ -11,6 +11,12 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
     - uses: actions/checkout@v3
+    - uses: uraimo/run-on-arch-action@v2
+      name: Run commands
+      id: runcmd
+      with:
+        arch: armv7
+        distro: ubuntu-20.04
 
     - name: Retrieve version and Changelog
       id: get_version
@@ -38,7 +44,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-
+    - uses: uraimo/run-on-arch-action@v2
+      name: Run commands
+      id: runcmd
+      with:
+        arch: armv7
+        distro: ubuntu-20.04
+        
     - name: Set up Python 3.11
       uses: actions/setup-python@v4
       with:
@@ -69,6 +81,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - uses: uraimo/run-on-arch-action@v2
+      name: Run commands
+      id: runcmd
+      with:
+        arch: armv7
+        distro: ubuntu-20.04
 
     - name: Set up Python 3.11
       uses: actions/setup-python@v4

@@ -81,7 +81,7 @@ jobs:
 
     - name: Build Release Executables
       run: |
-        scripts/build_bin_linux ${{needs.get_version.outputs.icloudpd_version}} amd64
+        scripts/build_bin_linux ${{needs.get_version.outputs.icloudpd_version}} armv7
 
     - name: Build Python Binary Wheel
       run: |
